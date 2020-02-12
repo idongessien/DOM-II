@@ -15,8 +15,36 @@ imgZoom.addEventListener('dblclick', function () {
         imgZoom.style.transition = "transform 1s";
     });
 
-    let redHead = document.querySelector("h2");
+    document.querySelector('body').addEventListener('click', function(){
+        this.style.background = "lightblue";
+    })
+
+    document.querySelector('body').addEventListener('copy', function(){
+        this.style.background = "red";
+    })
+
+    document.querySelector('body').addEventListener('paste', function(){
+        this.style.opacity = 0.5;
+    })
+
+    document.querySelector('body').addEventListener('mouseleave', function(){
+        this.style.opacity = 1;
+    })
+
+    document.querySelector('body').addEventListener('keyup', function(){
+        this.style.opacity = 0.3;
+    })
+
+    document.querySelector('body').addEventListener('keydown', function(){
+        this.style.opacity = 0;
+    })
+
+    document.querySelector('body').addEventListener('dragstart', function(){
+        alert("Dragged me !")
+    })
+
+  window.addEventListener('keypress', function(){
+        alert('Key pressed!');
+    })
+
     
-    redHead.addEventListener("select", function() {
-        redHead.style.color = "red";
-    });
