@@ -47,4 +47,8 @@ imgZoom.addEventListener('dblclick', function () {
         alert('Key pressed!');
     })
 
-    
+    let stopRefresh = document.querySelector('nav');
+    stopRefresh.addEventListener('click', (event) => {
+        event.preventDefault();
+        alert('stopped the refresh');
+    })
